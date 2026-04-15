@@ -36,7 +36,7 @@ const Banner = () => {
                    
                 </div>
 
-                 <hr class="border-gray-400 max-w-[86rem] mx-auto"></hr>
+                 <hr className="border-gray-400 max-w-[86rem] mx-auto"></hr>
         </div>
     );
 };
