@@ -16,11 +16,11 @@ const Banner = () => {
 
                         <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4 mb-10">
                             <div className="rounded-3xl border border-slate-200 bg-white p-6 text-center shadow-sm">
-                                <p className="text-4xl font-bold text-slate-900">10</p>
+                                <p className="text-4xl font-bold text-slate-900">12</p>
                                 <p className="mt-3 text-sm uppercase tracking-[0.2em] text-slate-500">Total Friends</p>
                             </div>
                             <div className="rounded-3xl border border-slate-200 bg-white p-6 text-center shadow-sm">
-                                <p className="text-4xl font-bold text-slate-900">3</p>
+                                <p className="text-4xl font-bold text-slate-900">4</p>
                                 <p className="mt-3 text-sm uppercase tracking-[0.2em] text-slate-500">On Track</p>
                             </div>
                             <div className="rounded-3xl border border-slate-200 bg-white p-6 text-center shadow-sm">

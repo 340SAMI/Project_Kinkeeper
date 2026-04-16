@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "John Doe",
-    "picture": "https://i.pravatar.cc/150?img=1",
+    "picture": "https://i.pravatar.cc/150?img=8",
     "email": "john.doe@gmail.com",
     "days_since_contact": 12,
     "status": "overdue",
@@ -49,7 +49,7 @@
   },
   {
     "id": 5,
-    "name": "David Miller",
+    "name": "Cloe Miller",
     "picture": "https://i.pravatar.cc/150?img=5",
     "email": "david.miller@gmail.com",
     "days_since_contact": 9,
@@ -62,7 +62,7 @@
   {
     "id": 6,
     "name": "Nusrat Jahan",
-    "picture": "https://i.pravatar.cc/150?img=6",
+    "picture": "https://i.pravatar.cc/150?img=43",
     "email": "nusrat.jahan@gmail.com",
     "days_since_contact": 3,
     "status": "on-track",
@@ -74,7 +74,7 @@
   {
     "id": 7,
     "name": "Rahim Uddin",
-    "picture": "https://i.pravatar.cc/150?img=7",
+    "picture": "https://i.pravatar.cc/150?img=59",
     "email": "rahim.uddin@gmail.com",
     "days_since_contact": 20,
     "status": "overdue",
@@ -86,7 +86,7 @@
   {
     "id": 8,
     "name": "Emily Carter",
-    "picture": "https://i.pravatar.cc/150?img=8",
+    "picture": "https://i.pravatar.cc/150?img=29",
     "email": "emily.carter@gmail.com",
     "days_since_contact": 5,
     "status": "almost due",
@@ -98,7 +98,7 @@
   {
     "id": 9,
     "name": "Sabbir Ahmed",
-    "picture": "https://i.pravatar.cc/150?img=9",
+    "picture": "https://i.pravatar.cc/150?img=52",
     "email": "sabbir.ahmed@gmail.com",
     "days_since_contact": 1,
     "status": "on-track",
@@ -110,7 +110,7 @@
   {
     "id": 10,
     "name": "Olivia Brown",
-    "picture": "https://i.pravatar.cc/150?img=10",
+    "picture": "https://i.pravatar.cc/150?img=46",
     "email": "olivia.brown@gmail.com",
     "days_since_contact": 13,
     "status": "overdue",
@@ -122,7 +122,7 @@
   {
     "id": 11,
     "name": "Hasan Mahmud",
-    "picture": "https://i.pravatar.cc/150?img=11",
+    "picture": "https://i.pravatar.cc/150?img=15",
     "email": "hasan.mahmud@gmail.com",
     "days_since_contact": 8,
     "status": "almost due",
@@ -136,7 +136,7 @@
     "name": "Sophia Lee",
     "picture": "https://i.pravatar.cc/150?img=12",
     "email": "sophia.lee@gmail.com",
-    "days_since_contact": 0,
+    "days_since_contact": 10,
     "status": "on-track",
     "tags": ["design", "colleague"],
     "bio": "UX designer colleague. We collaborate on product improvements.",
