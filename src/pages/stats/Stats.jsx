@@ -31,7 +31,7 @@ const Stats = () => {
 
 
         {/* Pie Chart */}
-        <div className="bg-white rounded-3xl border border-base-300 p-6 shadow-sm">
+        <div className="bg-white  rounded-3xl border border-base-300 p-6 shadow-sm">
           <h2 className="text-lg font-medium mb-1">Interaction Breakdown</h2>
           <p className="text-sm text-slate-500 mb-6">Distribution of calls, videos, and texts.</p>
 

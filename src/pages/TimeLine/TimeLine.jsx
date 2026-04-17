@@ -25,19 +25,13 @@ const TimeLine = () => {
           </div>
         </div>
 
-        <div className="bg-white rounded-3xl border border-base-300 p-5 shadow-sm mb-6">
-          <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-            <div>
-              <h2 className="text-lg font-medium">Filter timeline</h2>
-              <p className="text-sm text-slate-500">Sort and manage recent interactions.</p>
-            </div>
-            <div className="w-full md:w-64">
-              <div className="h-14 rounded-2xl border border-dashed border-base-300 bg-base-100 flex items-center justify-center text-slate-400">
-                Sort dropdown placeholder
-              </div>
-            </div>
-          </div>
-        </div>
+        <div className="dropdown dropdown-center">
+            <div tabIndex={0} role="button" className="btn m-1">Click  ⬇️</div>
+            <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+                <li><a>Item 1</a></li>
+                <li><a>Item 2</a></li>
+            </ul>
+         </div>
 
         <div className="grid gap-4">
           {FriendsHistory.length === 0 ? (

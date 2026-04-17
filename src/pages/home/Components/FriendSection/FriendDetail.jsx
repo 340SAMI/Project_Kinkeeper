@@ -1,6 +1,7 @@
-import React, { useContext} from 'react';
-import { useLoaderData } from 'react-router';
+import React, { Suspense, useContext} from 'react';
+import { Await, useLoaderData } from 'react-router';
 import { FriendContext } from '../../../../context/FriendContext';
+import Spinner from '../../../../UI/Spinner';
 
 const FriendDetail = () => {
     const friendData = useLoaderData();
@@ -17,7 +18,7 @@ const FriendDetail = () => {
 
     const {id, name, picture, email, days_since_contact, status, bio, goal, next_due_date, tags} = friendData
     return (
-        <div className='bg-base-200 max-h-1/3'>
+
     <div className="p-18 container mx-auto">
       
       {/* MAIN CONTAINER */}
@@ -108,7 +109,9 @@ const FriendDetail = () => {
         </div>
       </div>
     </div>
-</div>
+
+
+
     );
 };
 

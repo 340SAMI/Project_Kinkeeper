@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { FriendContext } from './FriendContext';
+import { toast } from 'react-toastify';
+
 
 const FriendParam = ({children}) => {
 
@@ -15,6 +17,19 @@ const FriendParam = ({children}) => {
       };
 
       setFriendsHistory([Friendobj, ...FriendsHistory]);
+
+      if(type=="call"){
+        toast.success(`successful call`);
+
+      }else if(type == "video"){
+        toast.success("successful video");
+
+
+      }else if(type == "text"){
+        toast.success("successful text");
+
+      }
+      
     }
 const contextobj = {
     handleOnClick,

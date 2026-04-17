@@ -1,4 +1,4 @@
-import { StrictMode } from 'react'
+import { StrictMode} from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter } from "react-router";
@@ -10,6 +10,8 @@ import FriendDetail from './pages/home/Components/FriendSection/FriendDetail';
 import FriendParam from './context/FriendParam';
 import TimeLine from './pages/TimeLine/TimeLine';
 import Stats from './pages/stats/Stats';
+import { ToastContainer } from 'react-toastify';
+
 
 const router = createBrowserRouter([
   {
@@ -24,7 +26,9 @@ const router = createBrowserRouter([
           const friendsDataPromise = await fetch('/friendsData.json');
           const friendsData = await friendsDataPromise.json();
           const Friend = friendsData.find((f) => f.id == params.FriendId);
-          return Friend;
+        
+           return Friend
+         
         },
         Component: FriendDetail,
       },
@@ -48,6 +52,6 @@ createRoot(document.getElementById('root')).render(
       <FriendParam>
         <RouterProvider router={router} />
       </FriendParam>   
-
+      <ToastContainer></ToastContainer>
   </StrictMode>,
 )
