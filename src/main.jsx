@@ -8,6 +8,8 @@ import Home from './pages/home/Home';
 import ErrorPage from './pages/error/ErrorPage';
 import FriendDetail from './pages/home/Components/FriendSection/FriendDetail';
 import FriendParam from './context/FriendParam';
+import TimeLine from './pages/TimeLine/TimeLine';
+import Stats from './pages/stats/Stats';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +27,14 @@ const router = createBrowserRouter([
           return Friend;
         },
         Component: FriendDetail,
+      },
+      {
+        path:'/timeline',
+        Component: TimeLine,                     
+      },
+      {
+        path:'/stats',
+        Component: Stats,
       }
     ]
   },

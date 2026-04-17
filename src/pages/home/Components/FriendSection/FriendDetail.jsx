@@ -1,23 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext} from 'react';
 import { useLoaderData } from 'react-router';
+import { FriendContext } from '../../../../context/FriendContext';
 
 const FriendDetail = () => {
     const friendData = useLoaderData();
 
-    const [FriendsHistory, setFriendsHistory]= useState([]);
-
-    const handleOnClick = (type, id)=>{
-      
-      const Friendobj = {
-        type,
-        friendId :id,
-        id: Date.now(),
-        time: new Date()
-      };
-
-      setFriendsHistory([Friendobj, ...FriendsHistory]);
-console.log(FriendsHistory);
-    }
+    const {handleOnClick, FriendsHistory} = useContext(FriendContext);
+    console.log(FriendsHistory);
+    
 
     const statusStyles = {
   overdue: 'badge badge-error rounded-full badge-lg text-white',
