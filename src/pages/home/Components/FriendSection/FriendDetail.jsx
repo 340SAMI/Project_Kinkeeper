@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router';
 
 const FriendDetail = () => {
     const friendData = useLoaderData();
-    console.log(friendData);
+
+    const [FriendsHistory, setFriendsHistory]= useState([]);
+
+    const handleOnClick = (type, id)=>{
+      
+      const Friendobj = {
+        type,
+        friendId :id,
+        id: Date.now(),
+        time: new Date()
+      };
+
+      setFriendsHistory([Friendobj, ...FriendsHistory]);
+console.log(FriendsHistory);
+    }
 
     const statusStyles = {
   overdue: 'badge badge-error rounded-full badge-lg text-white',
@@ -11,10 +25,10 @@ const FriendDetail = () => {
   'on-track': 'badge badge-success rounded-full badge-lg text-white',
 };
 
-    const {name, picture, email, days_since_contact, status, bio, goal, next_due_date, tags} = friendData
+    const {id, name, picture, email, days_since_contact, status, bio, goal, next_due_date, tags} = friendData
     return (
         <div className='bg-base-200 max-h-1/3'>
-    <div className="p-6 container mx-auto">
+    <div className="p-18 container mx-auto">
       
       {/* MAIN CONTAINER */}
       <div className="flex gap-6">
@@ -58,18 +72,24 @@ const FriendDetail = () => {
         <div className="w-2/3 grid grid-cols-3 gap-4">
           
           {/* Top Stats */}
-          <div className="bg-white p-4 rounded-xl shadow text-center">
-            <h2 className="text-2xl font-bold">62</h2>
+          <div className="bg-white p-4 rounded-xl shadow text-center flex flex-col justify-center">
+            <h2 className="text-2xl font-bold">{days_since_contact}</h2>
             <p className="text-sm text-slate-500">Days Since Contact</p>
           </div>
 
-          <div className="bg-white p-4 rounded-xl shadow text-center">
-            <h2 className="text-2xl font-bold">30</h2>
+          <div className="bg-white p-4 rounded-xl shadow text-center flex flex-col justify-center">
+            <h2 className="text-2xl font-bold">{goal}</h2>
             <p className="text-sm text-slate-500">Goal (Days)</p>
           </div>
 
-          <div className="bg-white p-4 rounded-xl shadow text-center">
-            <h2 className="text-2xl font-bold">Feb 27, 2026</h2>
+          <div className="bg-white p-4 rounded-xl shadow text-center flex flex-col justify-center">
+            <h2 className="text-2xl font-bold">  
+                {new Date(next_due_date).toLocaleDateString('en-US', {
+                    month: 'short',
+                    day: 'numeric',
+                    year: 'numeric'
+                })}
+            </h2>
             <p className="text-sm text-slate-500">Next Due</p>
           </div>
 
@@ -89,9 +109,9 @@ const FriendDetail = () => {
             <h3 className="mb-4 font-semibold">Quick Check-In</h3>
 
             <div className="flex gap-4">
-              <button className="flex-1 btn">Call</button>
-              <button className="flex-1 btn">Text</button>
-              <button className="flex-1 btn">Video</button>
+              <button onClick={()=>handleOnClick("call", id)} className="flex-1 btn">Call</button>
+              <button onClick={()=>handleOnClick("text", id)} className="flex-1 btn">Text</button>
+              <button onClick={()=>handleOnClick("video", id)} className="flex-1 btn">Video</button>
             </div>
           </div>
 

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router';
+import { Link, NavLink, useLocation } from 'react-router';
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
+    const location = useLocation();
+    const isHomeActive = location.pathname === '/' || location.pathname.startsWith('/FriendDetail');
 
     return (
         <>
@@ -40,8 +42,8 @@ const Navbar = () => {
                 <div className="hidden lg:flex flex-none items-center gap-3">
                     <NavLink
                         to="/"
-                        className={({ isActive }) =>
-                            isActive
+                        className={() =>
+                            isHomeActive
                                 ? 'btn btn-sm bg-emerald-700 text-white border-0 hover:bg-emerald-800'
                                 : 'btn btn-ghost btn-sm text-slate-700 hover:text-slate-900'
                         }
@@ -77,8 +79,8 @@ const Navbar = () => {
                         <NavLink
                             to="/"
                             onClick={() => setOpen(false)}
-                            className={({ isActive }) =>
-                                isActive
+                             className={() =>
+                                isHomeActive
                                     ? 'btn btn-sm bg-emerald-700 text-white border-0 hover:bg-emerald-800 w-full text-left'
                                     : 'btn btn-ghost btn-sm text-slate-700 hover:text-slate-900 w-full text-left'
                             }
